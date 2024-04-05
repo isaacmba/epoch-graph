@@ -351,10 +351,10 @@
     apply(x) {
       let y = this.range[0] + (Math.log10(x) - Math.log10(this.domain[0])) / (Math.log10(this.domain[1]) - Math.log10(this.domain[0])) * (this.range[1] - this.range[0]);
       return y;
-	}
+    }
 
- 	invert(y) {
-	  let logY = this.range[0] + (y - this.range[0]) / (this.range[1] - this.range[0]) * (Math.log10(this.domain[1]) - Math.log10(this.domain[0]));
+    invert(y) {
+      let logY = this.range[0] + (y - this.range[0]) / (this.range[1] - this.range[0]) * (Math.log10(this.domain[1]) - Math.log10(this.domain[0]));
       let x = Math.pow(10, logY);
       return x;
     }
